@@ -1,0 +1,206 @@
+{{!-- container that renders through main handlebars --}}
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Artist Savor</a>
+        {{!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button> --}}
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="./views/index-account.handlebars">My Account <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link1" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link2" href="/logout">Log Out</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    {{!-- Jumbotron container for Heading welcome and acct information  --}}
+    <div class="jumbotron jumbotron-fluid col-md-12">
+        <div class="container">
+            <div class="col-md-12">
+                <h1>Artist Savor</h1>
+                <p>Sock - Away for a rainy day</p>
+                <h2>Welcome <span class="member-name"></span></h2>
+                <h3>Account Address: <span class="artist-address"></span></h3>
+                <h4>Type of Art Form: <span class="art-form"></span></h4>
+                <h5>User Account ID: <span class="user-id"></span></h5>
+                {{!-- Buttons to call modals for inserting pay and cost of artist --}}
+                <div class="row" id="gigMoneyBtns">
+                    <button type="button" class="btn btn-success btn-lg" id="gigMoneyIn" data-toggle="modal"
+                        data-target="#gigInput"><i class="fa fa-dollar-sign" aria-hidden="true"></i>Artist
+                        Savor</button>
+                    <button type="button" class="btn btn-warning btn-lg" id="gigMoneyOut" data-toggle="modal"
+                        data-target="#gigOutput"><i class="fa fa-credit-card" aria-hidden="true"></i>Artist
+                        Cost</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    {{!-- row and col for interactive pie chart and total net holdings of the artist savor --}}
+    <div class="row">
+        <div class="col-md-6">
+            <div>
+                <canvas id="pieChart"></canvas>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div id="artistNet">
+                <h1>Artist Savor Total Net = $<span id="artistTotal"></span></h1>
+            </div>
+        </div>
+    </div>
+    <!-- card for revealing each pay transaction by venue type of art performance and total pay for gig-->
+    <div class="card">
+        <div class="card-header">
+            <h2>Artist Savor Holdings</h2>
+        </div>
+        <div class="card-body">
+            {{!-- table headings --}}
+            <table class="table table-striped" id="incomeTable">
+                <thead>
+                    <tr>
+                        <th scope="col">Venue</th>
+                        <th scope="col">Type of Performance</th>
+                        <th scope="col">Pay</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- pay handlebars loop for all transaction of this user-->
+                    {{#each pay}}
+                    <tr>
+                        <td> {{this.dataValues.origin}} </td>
+                        <td> {{this.dataValues.type}} </td>
+                        <td> {{this.dataValues.amount}} </td>
+                        <td> <button type="button" data-payid="{{this.dataValues.id}}"
+                                class="deletePay btn btn-warning">Remove</button>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <br>
+
+    <!--card showing costs of artist while on the road expenses incurred -->
+    <div class="card">
+        <div class="card-header">
+            <h2>Artist Cost</h2>
+        </div>
+        <div class="card-body">
+            {{!-- table headings --}}
+            <table class="table table-striped" id="expensesTable">
+                <thead>
+                    <tr>
+                        <th scope="col">Name the Payee</th>
+                        <th scope="col">Debit For</th>
+                        <th scope="col">Cost</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- cost handlebars loop for all transaction of this user-->
+                    {{#each cost}}
+                    <tr>
+                        <td> {{this.dataValues.origin}} </td>
+                        <td> {{this.dataValues.type}} </td>
+                        <td> {{this.dataValues.cost}} </td>
+                        <td> <button type="button" data-costid="{{this.dataValues.id}}"
+                                class="deleteCost btn btn-warning">Remove</button>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+</div>
+
+{{!-- artist input money modal --}}
+<div class="modal" id="gigInput" tabindex="-1" role="dialog" aria-labelledby="gigInput" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title modalh5">Artist Savor</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-body">
+                    {{!-- form group for inserting artist pay and add to db--}}
+                    <form id="savorForm">
+                        <div class="form-group">
+                            <label for="inputLabel">Performance</label>
+                            <input class="form-control" id="originMoney" type="text" aria-labelledby="gigInput"
+                                placeholder="What venue paid you?" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputLabel">Type of Art Shown or Performed</label>
+                            <input class="form-control" id="artType" type="text"
+                                placeholder="How did you earn your gig money?" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputLabel">Amount Socked Away</label>
+                            <input class="form-control" id="artAmount" type="number" placeholder="150.00" required>
+                        </div>
+                        <button type="submit" class="btn btn-success" id="payBtn">Arist Savor</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{{!-- artist cost modal --}}
+<div class="modal" id="gigOutput" tabindex="-1" role="dialog" aria-labelledby="gigOutput" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title modalh5">Artist Cost</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-body">
+                    {{!-- form group for inserting artist cost and add to db --}}
+                    <form id="savorForm">
+                        <div class="form-group">
+                            <label for="inputLabel">Artist Expense</label>
+                            <input class="form-control" id="originCost" type="text" aria-labelledby="gigOutput"
+                                placeholder="What is the name of the place you paid out?" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputLabel">What Did You Pay For?</label>
+                            <input class="form-control" id="costType" type="text" placeholder="What did you pay for?"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputLabel">Artist Cost</label>
+                            <input class="form-control" id="artCost" type="number" placeholder="150.00" required>
+                        </div>
+                        <button type="submit" class="btn btn-warning" id="costBtn">Arist Cost</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
