@@ -5,49 +5,7 @@ form.login {
   margin-top: 50px;
 }
 
-/* body {
-  background: rgb(161, 161, 182);
-  background-size: cover;
-  min-height: 680px;
-  width: 100%;
-  margin: 0px, 0px;
-} */
-/* .custom-navbar {
-  background-image: linear-gradient(#fff, #4aaaa4);
-}
-.custom-nav-link {
-  text-align: center;
-  width: 180px;
-  font-size: 24px;
-}
 
-#navbarSupportedContent {
-  justify-content: flex-end;
-  text-shadow: -1px 1px 0 #777,
-  1px 1px 0 #777,
- 1px -1px 0 #777;
-
-} */
-/* .navbar-brand {
-  font-size: 40px;
-} */
-/* 
-ul.navbar-nav.mr-auto {
-  padding: 16px;
-  list-style: none;
-}
-
-li.nav-item.active {
-  padding-right: 10px;
-}
-
-a.nav-link1 {
-  padding-right: 10px;
-}
-
-a.nav-link2 {
-  padding-right: 20px;
-} */
 
 #h1About {
   text-align: center;
@@ -56,15 +14,6 @@ a.nav-link2 {
   font-family: "Arial", "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 
-/* .main {
-  padding-top: 75px;
-  padding-left: 25px;
-  position: center;
-}
-
-#navAS {
-  height: 90px;
-} */
 
 p {
   font-size: 20px;
@@ -104,21 +53,10 @@ h6 {
   font-weight: 500;
 }
 
-.form-group {
+/* .form-group {
   width: 350px;
   margin-left: auto;
   margin-right: auto;
-}
-
-/* #jumbo {
-  background: linear-gradient(to top, #a8dde6 0%, #a2bbd4 59%);
-  border: 2px solid #a8dde6;
-  border-style: ridge;
-} */
-
-/* .container {
-  position: relative;
-  overflow: hidden;
 } */
 
 #pieChart {
@@ -145,7 +83,7 @@ h6 {
 }
 
 #gigMoneyOut {
-  float: right;
+ 
   height: 50px;
   width: 200px;
   border: 0;
@@ -158,6 +96,7 @@ h6 {
 }
 
 #gigMoneyIn {
+  
   height: 50px;
   width: 200px;
   border: 0;

@@ -37,9 +37,9 @@ p {
 }
 /* social icon display properties */
 
-h3 {
+/* h3 {
     text-align: center;
-}
+} */
 .social {
     width: 80px;
     height: 80px;
@@ -63,6 +63,11 @@ div .panel-body {
 }
 .jumbotron-fluid {
     width: 100vw;
+    margin-bottom: 20px;
+    background-image: none;
+    background: none;
+    background-color: whitesmoke;
+ 
 
 }
 /* navbar name logo properties */
@@ -163,3 +168,7 @@ div #page-head {
     max-width: 100vw;
   padding: 0;
 }
+/* #savorCostRow {
+display: flex;
+justify-content: space-around;
+} */
