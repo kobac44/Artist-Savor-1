@@ -22,7 +22,7 @@
             </ul>
         </div>
     </nav>
-    
+
     {{!-- Jumbotron container for Heading welcome and acct information  --}}
     <div class="jumbotron jumbotron-fluid col-md-12">
         <div class="container">
@@ -49,83 +49,119 @@
 
     {{!-- row and col for interactive pie chart and total net holdings of the artist savor --}}
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-3">
             <div>
                 <canvas id="pieChart"></canvas>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-3">
             <div id="artistNet">
                 <h1>Artist Savor Total Net = $<span id="artistTotal"></span></h1>
             </div>
         </div>
-    </div>
-    <!-- card for revealing each pay transaction by venue type of art performance and total pay for gig-->
-    <div class="card">
-        <div class="card-header">
-            <h2>Artist Savor Holdings</h2>
-        </div>
-        <div class="card-body">
-            {{!-- table headings --}}
-            <table class="table table-striped" id="incomeTable">
-                <thead>
-                    <tr>
-                        <th scope="col">Venue</th>
-                        <th scope="col">Type of Performance</th>
-                        <th scope="col">Pay</th>
-                        <th scope="col"></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- pay handlebars loop for all transaction of this user-->
-                    {{#each pay}}
-                    <tr>
-                        <td> {{this.dataValues.origin}} </td>
-                        <td> {{this.dataValues.type}} </td>
-                        <td> {{this.dataValues.amount}} </td>
-                        <td> <button type="button" data-payid="{{this.dataValues.id}}"
-                                class="deletePay btn btn-warning">Remove</button>
-                        </td>
-                    </tr>
-                    {{/each}}
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <br>
+        <div class="col-md-3">
+            <div id="dow">
+                <button type="button" class="btn btn-secondary" data-trigger="focus" data-container="body"
+                    data-toggle="DOWpopover" data-placement="right">
+                    Dow Jones Industrial Average
+                </button>
+            </div>
 
-    <!--card showing costs of artist while on the road expenses incurred -->
-    <div class="card">
-        <div class="card-header">
-            <h2>Artist Cost</h2>
+
+            <div id="nas">
+                <button type="button" class="btn btn-secondary" data-trigger="focus" data-container="body"
+                    data-toggle="NASpopover" data-placement="right">
+                    NASDAQ Composite
+                </button>
+            </div>
+
+
+            <div id="snp">
+                <button type="button" class="btn btn-secondary" data-trigger="focus" data-container="body"
+                    data-toggle="SNPpopover" data-placement="right">
+                    S&amp;P 500 Index
+                </button>
+            </div>
         </div>
-        <div class="card-body">
-            {{!-- table headings --}}
-            <table class="table table-striped" id="expensesTable">
-                <thead>
-                    <tr>
-                        <th scope="col">Name the Payee</th>
-                        <th scope="col">Debit For</th>
-                        <th scope="col">Cost</th>
-                        <th scope="col"></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- cost handlebars loop for all transaction of this user-->
-                    {{#each cost}}
-                    <tr>
-                        <td> {{this.dataValues.origin}} </td>
-                        <td> {{this.dataValues.type}} </td>
-                        <td> {{this.dataValues.cost}} </td>
-                        <td> <button type="button" data-costid="{{this.dataValues.id}}"
-                                class="deleteCost btn btn-warning">Remove</button>
-                        </td>
-                    </tr>
-                    {{/each}}
-                </tbody>
-            </table>
-        </div>
+        <form>
+
+            <label for="formGroupExampleInput">Stock Quotes by Symbol</label><br>
+            <input type="text" class="form-control" id="symbol" placeholder="AAPL, GOOGL etc..."><br>
+            <button type="submit" class="btn btn-primary btn-lg" id="symbolBtn">Submit Stock Symbol</button><br>
+            <label for="formGroupExampleInput2">Quote</label><br>
+            <input type="text" class="form-control" id="quote">
+
+        </form>
+
     </div>
+
+</div>
+<!-- card for revealing each pay transaction by venue type of art performance and total pay for gig-->
+<div class="card">
+    <div class="card-header">
+        <h2>Artist Savor Holdings</h2>
+    </div>
+    <div class="card-body">
+        {{!-- table headings --}}
+        <table class="table table-striped" id="incomeTable">
+            <thead>
+                <tr>
+                    <th scope="col">Venue</th>
+                    <th scope="col">Type of Performance</th>
+                    <th scope="col">Pay</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- pay handlebars loop for all transaction of this user-->
+                {{#each pay}}
+                <tr>
+                    <td> {{this.dataValues.origin}} </td>
+                    <td> {{this.dataValues.type}} </td>
+                    <td> {{this.dataValues.amount}} </td>
+                    <td> <button type="button" data-payid="{{this.dataValues.id}}"
+                            class="deletePay btn btn-warning">Remove</button>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>
+<br>
+
+<!--card showing costs of artist while on the road expenses incurred -->
+<div class="card">
+    <div class="card-header">
+        <h2>Artist Cost</h2>
+    </div>
+    <div class="card-body">
+        {{!-- table headings --}}
+        <table class="table table-striped" id="expensesTable">
+            <thead>
+                <tr>
+                    <th scope="col">Name the Payee</th>
+                    <th scope="col">Debit For</th>
+                    <th scope="col">Cost</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- cost handlebars loop for all transaction of this user-->
+                {{#each cost}}
+                <tr>
+                    <td> {{this.dataValues.origin}} </td>
+                    <td> {{this.dataValues.type}} </td>
+                    <td> {{this.dataValues.cost}} </td>
+                    <td> <button type="button" data-costid="{{this.dataValues.id}}"
+                            class="deleteCost btn btn-warning">Remove</button>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>
 </div>
 
 
