@@ -9,9 +9,11 @@
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
         integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!-- sticky footer bootstrap for css stylesheet -->
+    {{!-- <link rel="stylesheet" href="https://getbootstrap.com/docs/4.0/examples/sticky-footer/sticky-footer.css"> --}}
     {{!-- local style sheet for view --}}
     <link rel="stylesheet" href="stylesheets/style.css" type="text/css" />
-
+    <link rel="stylesheet" href="stylesheets/style2.css" type="text/css" />
     {{!-- chart js cdn for view and animation of pie chart --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
     {{!-- jquery and bootstrap js cdns --}}
@@ -35,7 +37,7 @@
 <body>
 
     {{!-- handlebars connector to container when rendered to index handlebars --}}
-    <div class="container">
+    <div class="container indexer" id="no-padd">
         {{{body}}}
     </div>
 </body>

@@ -17,7 +17,6 @@ $(document).ready(function () {
         // the S&P 500 Daily information
         let searchsnp = response.marketSummaryResponse.result[0];
         let snp = searchsnp.shortName;
-        console.log("this is the name of exchange", snp);
         let SNPprice = searchsnp.regularMarketPrice.fmt;
         let SNPchange = searchsnp.regularMarketChangePercent.fmt;
         let SNPDATA = `Regular Market Price today:

@@ -1,101 +1,97 @@
 {{!-- container that renders through main handlebars --}}
-<div class="container">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Artist Savor</a>
-        {{!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-expanded="false" aria-label="Toggle navigation">
+
+<nav class="navbar navbar-expand-lg navbar-dark py-0 custom-navbar" id="no-padd">
+    <div class="container-fluid" id="no-padd">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <a id="logo" class="navbar-brand" href="#">Artist Savor</a>
+        <button class="navbar-toggler" data-toggle="collapse" aria="hidden" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-        </button> --}}
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="./views/index-account.handlebars">My Account <span
-                            class="sr-only">(current)</span></a>
+        </button>
+        <!-- Collects the nav links, forms, and content for toggling -->
+        <div class=" collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav-item active"><a class="nav-link custom-nav-link" href="about.html">About Us</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link1" href="about.html">About Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link2" href="/logout">Log Out</a>
-                </li>
+                <li class="nav-item active"><a class="nav-link custom-nav-link" href="/logout">Log Out</a>
             </ul>
-        </div>
-    </nav>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
 
-    {{!-- Jumbotron container for Heading welcome and acct information  --}}
-    <div class="jumbotron jumbotron-fluid col-md-12">
-        <div class="container">
-            <div class="col-md-12">
-                <h1>Artist Savor</h1>
-                <p>Sock - Away for a rainy day</p>
-                <h2>Welcome <span class="member-name"></span></h2>
-                <h3>Account Address: <span class="artist-address"></span></h3>
-                <h4>Type of Art Form: <span class="art-form"></span></h4>
-                <h5>User Account ID: <span class="user-id"></span></h5>
-                {{!-- Buttons to call modals for inserting pay and cost of artist --}}
-                <div class="row" id="gigMoneyBtns">
-                    <button type="button" class="btn btn-success btn-lg" id="gigMoneyIn" data-toggle="modal"
-                        data-target="#gigInput"><i class="fa fa-dollar-sign" aria-hidden="true"></i>Artist
-                        Savor</button>
-                    <button type="button" class="btn btn-warning btn-lg" id="gigMoneyOut" data-toggle="modal"
-                        data-target="#gigOutput"><i class="fa fa-credit-card" aria-hidden="true"></i>Artist
-                        Cost</button>
-                </div>
-            </div>
+{{!-- Jumbotron container for Heading welcome and acct information  --}}
+<div class="jumbotron-fluid">
+    <div class="container">
+        {{!-- <div class="col-md-12"> --}}
+        <h1>Artist Savor</h1>
+        <p>Sock - Away for a rainy day</p>
+        <h2>Welcome <span class="member-name"></span></h2>
+        <h3>Account Address: <span class="artist-address"></span></h3>
+        <h4>Type of Art Form: <span class="art-form"></span></h4>
+        <h5>User Account ID: <span class="user-id"></span></h5>
+        {{!-- Buttons to call modals for inserting pay and cost of artist --}}
+        <div class="row" id="gigMoneyBtns">
+            <button type="button" class="btn btn-success btn-lg" id="gigMoneyIn" data-toggle="modal"
+                data-target="#gigInput"><i class="fa fa-dollar-sign" aria-hidden="true"></i>Artist
+                Savor</button>
+            <button type="button" class="btn btn-warning btn-lg" id="gigMoneyOut" data-toggle="modal"
+                data-target="#gigOutput"><i class="fa fa-credit-card" aria-hidden="true"></i>Artist
+                Cost</button>
+        </div>
+        {{!-- </div> --}}
+    </div>
+</div>
+
+
+{{!-- row and col for interactive pie chart and total net holdings of the artist savor --}}
+<div class="row">
+    <div class="col-md-3">
+        <div>
+            <canvas id="pieChart"></canvas>
         </div>
     </div>
-
-
-    {{!-- row and col for interactive pie chart and total net holdings of the artist savor --}}
-    <div class="row">
-        <div class="col-md-3">
-            <div>
-                <canvas id="pieChart"></canvas>
-            </div>
+    <div class="col-md-3">
+        <div id="artistNet">
+            <h1>Artist Savor Total Net = $<span id="artistTotal"></span></h1>
         </div>
-        <div class="col-md-3">
-            <div id="artistNet">
-                <h1>Artist Savor Total Net = $<span id="artistTotal"></span></h1>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div id="dow">
-                <button type="button" class="btn btn-secondary" data-trigger="focus" data-container="body"
-                    data-toggle="DOWpopover" data-placement="right">
-                    Dow Jones Industrial Average
-                </button>
-            </div>
-
-
-            <div id="nas">
-                <button type="button" class="btn btn-secondary" data-trigger="focus" data-container="body"
-                    data-toggle="NASpopover" data-placement="right">
-                    NASDAQ Composite
-                </button>
-            </div>
-
-
-            <div id="snp">
-                <button type="button" class="btn btn-secondary" data-trigger="focus" data-container="body"
-                    data-toggle="SNPpopover" data-placement="right">
-                    S&amp;P 500 Index
-                </button>
-            </div>
-        </div>
-        <form>
-
-            <label for="formGroupExampleInput">Stock Quotes by Symbol</label><br>
-            <input type="text" class="form-control" id="symbol" placeholder="AAPL, GOOGL etc..."><br>
-            <button type="submit" class="btn btn-primary btn-lg" id="symbolBtn">Submit Stock Symbol</button><br>
-            <label for="formGroupExampleInput2">Quote</label><br>
-            <input type="text" class="form-control" id="quote">
-
-        </form>
-
     </div>
+    <div class="col-md-3">
+        <div id="dow">
+            <button type="button" class="btn btn-secondary" data-trigger="focus" data-container="body"
+                data-toggle="DOWpopover" data-placement="right">
+                Dow Jones Industrial Average
+            </button>
+        </div>
+
+
+        <div id="nas">
+            <button type="button" class="btn btn-secondary" data-trigger="focus" data-container="body"
+                data-toggle="NASpopover" data-placement="right">
+                NASDAQ Composite
+            </button>
+        </div>
+
+
+        <div id="snp">
+            <button type="button" class="btn btn-secondary" data-trigger="focus" data-container="body"
+                data-toggle="SNPpopover" data-placement="right">
+                S&amp;P 500 Index
+            </button>
+        </div>
+    </div>
+    <form>
+
+        <label for="formGroupExampleInput">Stock Quotes by Symbol</label><br>
+        <input type="text" class="form-control" id="symbol" placeholder="AAPL, GOOGL etc..."><br>
+        <button type="submit" class="btn btn-primary btn-lg" id="symbolBtn">Submit Stock Symbol</button><br>
+        <label for="formGroupExampleInput2">Quote</label><br>
+        <input type="text" class="form-control" id="quote">
+
+    </form>
 
 </div>
+
+
 <!-- card for revealing each pay transaction by venue type of art performance and total pay for gig-->
 <div class="card">
     <div class="card-header">
@@ -162,11 +158,10 @@
         </table>
     </div>
 </div>
-</div>
 
 
 
-</div>
+
 
 {{!-- artist input money modal --}}
 <div class="modal" id="gigInput" tabindex="-1" role="dialog" aria-labelledby="gigInput" aria-hidden="true">

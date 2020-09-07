@@ -1,0 +1,165 @@
+/* border inside box size */
+* {
+    box-sizing: border-box;
+}
+/* set body weight and background properties */
+
+body 
+{
+    background-color: #fff;
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
+    font-size: 16px;
+    line-height: 32px;
+    font-family: 'Arial', 'Helveticaa Neue', Arial, Helvetica, sans-serif;
+    color: #777;
+    margin: 0px, 0px;
+}
+
+/* header title style */
+
+.head-title-style {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: -1px 1px 0 #777,
+				  1px 1px 0 #777,
+                 1px -1px 0 #777;
+    color:  #eee;
+
+}
+#h2Signup {
+    margin-top: 20px;
+    text-align: center;
+   font-weight: 400;
+
+}
+p {
+    text-align: center;
+}
+/* social icon display properties */
+
+h3 {
+    text-align: center;
+}
+.social {
+    width: 80px;
+    height: 80px;
+    margin-top: 8px;
+    margin-right: 0px;
+}
+
+div .panel-body {
+    display: flex;
+    justify-content:space-around;
+}    
+
+.social:last-child {
+    margin-right: 0;
+}
+
+#social {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(#4aaaa4, #fff); 
+}
+.jumbotron-fluid {
+    width: 100vw;
+
+}
+/* navbar name logo properties */
+
+#logo {
+    width: 250px;
+    height: 90px;
+    background: #4aaaa4;
+    float: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    line-height: 90px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 30px;
+    text-decoration: none;
+    text-shadow: -1px 1px 0 #777,
+				  1px 1px 0 #777,
+				 1px -1px 0 #777;
+				
+}
+ /* main container properties */
+
+#main-container{
+    background: #fff;
+    padding: 30px, auto;
+    margin: 0 0 0 0;
+    width: 100%;
+    height: 100%;
+    max-width: 950px;
+    float: right;
+    border: 2px solid #4aaaa4;
+}
+
+/* about me image initial set */
+
+#auth-image {
+    width: auto;
+    height: auto;
+    float: left;
+    margin: 20px auto;
+    justify-content: center;
+}
+
+/* content of about me main container set paragraphs */
+
+.content {
+   
+    margin: 20px 0 40px 0;
+    float: left;
+    word-wrap: break-word;
+}
+
+
+/* navigation bar properties */
+
+.custom-navbar {
+    background-image: linear-gradient(#fff, #4aaaa4);
+}
+.custom-nav-link {
+    text-align: center;
+    width: 180px;
+    font-size: 24px;
+}
+
+#navbarSupportedContent {
+    justify-content: flex-end;
+    text-shadow: -1px 1px 0 #777,
+    1px 1px 0 #777,
+   1px -1px 0 #777;
+  
+}
+
+#no-padd {
+    padding: 0;
+}
+
+div #page-head {
+    margin: 0;
+    padding:0 0 0 40px;
+    background: linear-gradient(#4aaaa4, #fff);
+}
+#head-width {
+    max-width: 1188px;
+    margin: 0 auto;
+}
+
+/* fixed footer properties */
+
+.footer {
+    background-color: #4aaaa4;
+    color: white;
+    text-align: center;
+    padding: 12px auto;
+} 
+.indexer {
+    margin: none;
+    max-width: 100vw;
+  padding: 0;
+}

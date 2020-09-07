@@ -5,18 +5,33 @@ form.login {
   margin-top: 50px;
 }
 
-body {
+/* body {
   background: rgb(161, 161, 182);
   background-size: cover;
   min-height: 680px;
   width: 100%;
   margin: 0px, 0px;
+} */
+/* .custom-navbar {
+  background-image: linear-gradient(#fff, #4aaaa4);
+}
+.custom-nav-link {
+  text-align: center;
+  width: 180px;
+  font-size: 24px;
 }
 
-.navbar-brand {
+#navbarSupportedContent {
+  justify-content: flex-end;
+  text-shadow: -1px 1px 0 #777,
+  1px 1px 0 #777,
+ 1px -1px 0 #777;
+
+} */
+/* .navbar-brand {
   font-size: 40px;
-}
-
+} */
+/* 
 ul.navbar-nav.mr-auto {
   padding: 16px;
   list-style: none;
@@ -32,16 +47,16 @@ a.nav-link1 {
 
 a.nav-link2 {
   padding-right: 20px;
-}
+} */
 
-h1 {
+#h1About {
   text-align: center;
   font-size: 40px;
   font-weight: 100;
   font-family: "Arial", "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 
-.main {
+/* .main {
   padding-top: 75px;
   padding-left: 25px;
   position: center;
@@ -49,7 +64,7 @@ h1 {
 
 #navAS {
   height: 90px;
-}
+} */
 
 p {
   font-size: 20px;
@@ -95,19 +110,19 @@ h6 {
   margin-right: auto;
 }
 
-#jumbo {
+/* #jumbo {
   background: linear-gradient(to top, #a8dde6 0%, #a2bbd4 59%);
   border: 2px solid #a8dde6;
   border-style: ridge;
-}
+} */
 
-.container {
+/* .container {
   position: relative;
   overflow: hidden;
-}
+} */
 
 #pieChart {
-  width: 45%;
+  width: 100%;
   margin: 15px auto;
 }
 

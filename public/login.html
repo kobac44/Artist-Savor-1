@@ -6,31 +6,39 @@
   <title>Passport Authentication</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css" />
-  <link href="stylesheets/style.css" rel="stylesheet" />
+  <!-- css local stylesheet and cdn bootstrap css -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <!-- sticky footer bootstrap for css stylesheet -->
+  <link rel="stylesheet" href="https://getbootstrap.com/docs/4.0/examples/sticky-footer/sticky-footer.css">
+  <link href="stylesheets/style2.css" rel="stylesheet" />
 </head>
 <!-- login html nav bar -->
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Artist Savor</a>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link2" href="about.html">About Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link2" href="/logout">Log Out</a>
-        </li>
-      </ul>
-    </div>
+  <nav class="navbar navbar-expand-lg navbar-dark py-0 custom-navbar" id="no-padd">
+    <div class="container-fluid" id="no-padd">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <a id="logo" class="navbar-brand" href="#">Artist Savor</a>
+      <button class="navbar-toggler" data-toggle="collapse" aria="hidden" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Collects the nav links, forms, and content for toggling -->
+      <div class=" collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-item active"><a class="nav-link custom-nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item active"><a class="nav-link custom-nav-link" href="/logout">Sign Up</a>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
   </nav>
-
   <!-- container for the form group to login with email and password -->
   <div class="container">
     <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <h2>Login Form</h2>
+      <div class="col-sm-12">
+        <h2 id="h2Signup">Login Form</h2>
         <form class="login">
           <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>

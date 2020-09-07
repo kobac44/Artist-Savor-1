@@ -8,7 +8,7 @@
   },
   "test": {
     "username": "root",
-    "password": "iC4]mY5*pZ4<uD7&rP8(",
+    "password": "",
     "database": "passport_demo",
     "host": "localhost",
     "dialect": "mysql"
