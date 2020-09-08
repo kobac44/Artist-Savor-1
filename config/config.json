@@ -1,14 +1,14 @@
 {
   "development": {
     "username": "",
-    "password": ,
+    "password": "",
     "database": "passport_demo",
     "host": "",
     "dialect": "mysql"
   },
   "test": {
     "username": "",
-    "password": ,
+    "password": "",
     "database": "passport_demo",
     "host": "localhost",
     "dialect": "mysql"
