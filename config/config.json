@@ -1,14 +1,14 @@
 {
   "development": {
-    "username": "root",
-    "password": "iC4]mY5*pZ4<uD7&rP8(",
+    "username": "",
+    "password": ,
     "database": "passport_demo",
-    "host": "localhost",
+    "host": "",
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": "iC4]mY5*pZ4<uD7&rP8(",
+    "username": "",
+    "password": ,
     "database": "passport_demo",
     "host": "localhost",
     "dialect": "mysql"
