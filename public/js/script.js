@@ -6,7 +6,7 @@ $(document).ready(function () {
 
 
 
-    // const api_key = process.env.API_KEY;
+    const api_key = process.env.API_KEY;
     var settings = {
         "async": true,
         "crossDomain": true,
@@ -14,7 +14,7 @@ $(document).ready(function () {
         "method": "GET",
         "headers": {
             "x-rapidapi-host": "apidojo-yahoo-finance-v1.p.rapidapi.com",
-            "x-rapidapi-key": API_KEY,
+            "x-rapidapi-key": api_key,
 
         }
     }
@@ -70,7 +70,7 @@ $(document).ready(function () {
                 "method": "GET",
                 "headers": {
                     "x-rapidapi-host": "apidojo-yahoo-finance-v1.p.rapidapi.com",
-                    "x-rapidapi-key": API_KEY,
+                    "x-rapidapi-key": api_key,
 
                 }
             }
