@@ -2,6 +2,11 @@
 
 $(document).ready(function () {
     // api for stock market price current var was required  with the api yahoo finance
+
+
+
+
+    // const api_key = process.env.API_KEY;
     var settings = {
         "async": true,
         "crossDomain": true,
@@ -9,7 +14,8 @@ $(document).ready(function () {
         "method": "GET",
         "headers": {
             "x-rapidapi-host": "apidojo-yahoo-finance-v1.p.rapidapi.com",
-            "x-rapidapi-key": "acd626c871msh56e79dd581cd845p1e0ed3jsndbc38000616c"
+            "x-rapidapi-key": "acd626c871msh56e79dd581cd845p1e0ed3jsndbc38000616c",
+
         }
     }
     // ajax call to pull in the current market price of SnP, Dow, Nasdaq 
@@ -64,7 +70,8 @@ $(document).ready(function () {
                 "method": "GET",
                 "headers": {
                     "x-rapidapi-host": "apidojo-yahoo-finance-v1.p.rapidapi.com",
-                    "x-rapidapi-key": "acd626c871msh56e79dd581cd845p1e0ed3jsndbc38000616c"
+                    "x-rapidapi-key": "acd626c871msh56e79dd581cd845p1e0ed3jsndbc38000616c",
+
                 }
             }
         // ajax call from yahoo finance api for stock symbol current market price
