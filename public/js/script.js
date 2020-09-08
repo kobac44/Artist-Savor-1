@@ -6,7 +6,7 @@ $(document).ready(function () {
 
 
 
-    const api_key = process.env.API_KEY;
+    let api_key = process.env.API_KEY;
     var settings = {
         "async": true,
         "crossDomain": true,
