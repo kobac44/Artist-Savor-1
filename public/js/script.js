@@ -76,10 +76,18 @@ $(document).ready(function () {
         $.ajax(settings).done(function (SYMBresponse) {
 
             let quoted = SYMBresponse.quoteResponse.result[0].regularMarketPrice;
-            quoteOut = `Regular Market Price: $ ${quoted.toFixed(2)}`;
+            quoteOut = `Market Price: $ ${quoted.toFixed(2)}`;
             document.getElementById("quote").value = quoteOut;
 
         });
+    };
+    let clearBtn = $('#clearBtn');
+    clearBtn.on("click", clearSubmit);
+    function clearSubmit(event) {
+        event.preventDefault();
+        $('#symbol').val("");
+        $('#quote').val("");
+
     };
 });
 

@@ -44,21 +44,22 @@
 
 
 {{!-- row and col for interactive pie chart and total net holdings of the artist savor --}}
-<div class="row">
-    <div class="col-sm-3">
+<div class="row spaceRow">
+    <div class="col-sm-4 pie">
         <div>
             <canvas id="pieChart"></canvas>
         </div>
     </div>
-    <div class="col-sm-2">
+    <div class="col-sm-2 net">
         <div id="artistNet">
-            <h1>Artist Savor Total Net = $<span id="artistTotal"></span></h1>
+            <h1>Artist Savor </br>Total = $<span id="artistTotal"></span></h1>
         </div>
     </div>
-    <div class="col-sm-2">
+    <div class="col-sm-2 pop">
+        <header id="labels">View Market Prices:</header>
         <div id="dow">
             <button type="button" class="btn btn-secondary" data-trigger="focus" data-container="body"
-                data-toggle="DOWpopover" data-placement="right">
+                data-toggle="DOWpopover" data-placement="left">
                 Dow Jones Industrial Average
             </button>
         </div>
@@ -66,7 +67,7 @@
 
         <div id="nas">
             <button type="button" class="btn btn-secondary" data-trigger="focus" data-container="body"
-                data-toggle="NASpopover" data-placement="right">
+                data-toggle="NASpopover" data-placement="left">
                 NASDAQ Composite
             </button>
         </div>
@@ -74,20 +75,22 @@
 
         <div id="snp">
             <button type="button" class="btn btn-secondary" data-trigger="focus" data-container="body"
-                data-toggle="SNPpopover" data-placement="right">
+                data-toggle="SNPpopover" data-placement="left">
                 S&amp;P 500 Index
             </button>
         </div>
     </div>
     <div class="col-sm-2">
-        <form>
+        <form class="qoute">
 
-            <label for="formGroupExampleInput">Stock Quotes by Symbol</label><br>
+            <label id="labels" for="formGroupExampleInput">Stock Quotes by Symbol</label><br>
             <input type="text" class="form-control" id="symbol" placeholder="AAPL, GOOGL etc..."><br>
             <button type="submit" class="btn btn-primary btn-lg" id="symbolBtn">Submit Stock Symbol</button><br>
-            <label for="formGroupExampleInput2">Quote</label><br>
+            <label id="labels" for="formGroupExampleInput2">Quote</label><br>
             <input type="text" class="form-control" id="quote">
-
+            <button type="button" id="clearBtn" class="btn btn-info">
+                Clear
+            </button>
         </form>
     </div>
 
