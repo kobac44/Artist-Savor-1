@@ -62,20 +62,10 @@ $(document).ready(function () {
     function symbolSubmit(event) {
         event.preventDefault();
         symbol = $('#symbol').val().trim();
-        let query = "https://apidojo-yahoo-finance-v1.p.rapidapi.com/market/get-quotes?region=US&lang=en&symbols=" + symbol + "%252CKC%253DF%252C002210.KS%252CIWM%252CAMECX",
-            settings = {
-                "async": true,
-                "crossDomain": true,
-                "url": query,
-                "method": "GET",
-                "headers": {
-                    "x-rapidapi-host": "apidojo-yahoo-finance-v1.p.rapidapi.com",
-                    "x-rapidapi-key": "acd626c871msh56e79dd581cd845p1e0ed3jsndbc38000616c",
 
-                }
-            }
         // ajax call from yahoo finance api for stock symbol current market price
-        $.ajax(settings).done(function (SYMBresponse) {
+        $.ajax('api/yahoo/' + symbol).done(function (SYMBresponse) {
+            console.log(SYMBresponse);
             // load the DOM with market price returned 
             let quoted = SYMBresponse.quoteResponse.result[0].regularMarketPrice;
             quoteOut = `Market Price: $ ${quoted.toFixed(2)}`;

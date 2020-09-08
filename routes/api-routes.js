@@ -2,6 +2,7 @@
 const db = require("../models");
 const passport = require("../config/passport");
 const { Sequelize, Model, DataTypes } = require('sequelize');
+const axios = require("axios");
 module.exports = function (app) {
   // Using the passport.authenticate middleware with our local strategy.
   // If the user has valid login credentials, send them to the members page.
@@ -134,4 +135,23 @@ module.exports = function (app) {
       res.json(dbCost);
     });
   });
+  app.get('/api/yahoo/:symbol', function (req, res) {
+    let query = "https://apidojo-yahoo-finance-v1.p.rapidapi.com/market/get-quotes?region=US&lang=en&symbols=" + req.params.symbol + "%252CKC%253DF%252C002210.KS%252CIWM%252CAMECX";
+
+    const settings = {
+      "async": true,
+      "crossDomain": true,
+      "url": query,
+      "method": "GET",
+      "headers": {
+        "x-rapidapi-host": "apidojo-yahoo-finance-v1.p.rapidapi.com",
+        "x-rapidapi-key": process.env.API_KEY,
+
+      }
+    }
+    axios(settings).then(function (result) {
+      console.log("results", result);
+      res.json(result.data);
+    })
+  })
 };
