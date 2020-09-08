@@ -5,7 +5,7 @@ const session = require("express-session");
 const passport = require("./config/passport");
 // .env file config call
 require('dotenv').config;
-const config = require("./config/config.js");
+
 // Setting up port and requiring models for syncing
 const PORT = process.env.PORT || 8080;
 const db = require("./models");
