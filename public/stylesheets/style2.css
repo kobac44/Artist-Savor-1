@@ -26,41 +26,18 @@ body
     color:  #eee;
 
 }
+/* signup html h2 style */
 #h2Signup {
     margin-top: 20px;
     text-align: center;
    font-weight: 400;
 
 }
+/* all p tags center */
 p {
     text-align: center;
 }
-/* social icon display properties */
-
-/* h3 {
-    text-align: center;
-} */
-.social {
-    width: 80px;
-    height: 80px;
-    margin-top: 8px;
-    margin-right: 0px;
-}
-
-div .panel-body {
-    display: flex;
-    justify-content:space-around;
-}    
-
-.social:last-child {
-    margin-right: 0;
-}
-
-#social {
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(#4aaaa4, #fff); 
-}
+/* stylize the jumbotron on render of index handlebars */
 .jumbotron-fluid {
     width: 100vw;
     margin-bottom: 20px;
@@ -68,7 +45,7 @@ div .panel-body {
     background: none;
     background-color: whitesmoke;
 }
-/* navbar name logo properties */
+/* navbar name logo properties for artist savor logo */
 
 #logo {
     width: 250px;
@@ -87,39 +64,7 @@ div .panel-body {
 				 1px -1px 0 #777;
 				
 }
- /* main container properties */
-
-#main-container{
-    background: #fff;
-    padding: 30px, auto;
-    margin: 0 0 0 0;
-    width: 100%;
-    height: 100%;
-    max-width: 950px;
-    float: right;
-    border: 2px solid #4aaaa4;
-}
-
-/* about me image initial set */
-
-#auth-image {
-    width: auto;
-    height: auto;
-    float: left;
-    margin: 20px auto;
-    justify-content: center;
-}
-
-/* content of about me main container set paragraphs */
-
-.content {
-   
-    margin: 20px 0 40px 0;
-    float: left;
-    word-wrap: break-word;
-}
-
-
+ 
 /* navigation bar properties */
 
 .custom-navbar {
@@ -166,6 +111,7 @@ div #page-head {
     max-width: 100vw;
   padding: 0;
 }
+/* style and position index handlebars main content */
 #savorCostRow {
 display: flex;
 justify-content: space-around;
@@ -191,21 +137,25 @@ justify-content: baseline;
 .quote {
     margin-left: 40px;
 }
+/* conform the popover buttons */
 .btn-secondary {
     width: 228px;
     height: 62px;
     margin-top: 40px;
     margin-bottom: 40px;
 }
+/* style all labels with heavy font */
 #labels {
     font-size: 20px;
     font-weight: 500;
 }
+/* label view style for stock price */
 #quote {
     border-width: 4px;
    border-color: #4aaaa4;
    margin-bottom: 30px;
 }
+/* html buttons signup and login border added */
 .btn-default {
     border-width: 4px;
     border-color: #4aaaa4;
