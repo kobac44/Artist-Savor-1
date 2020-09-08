@@ -70,7 +70,7 @@ $(document).ready(function () {
                 "method": "GET",
                 "headers": {
                     "x-rapidapi-host": "apidojo-yahoo-finance-v1.p.rapidapi.com",
-                    "x-rapidapi-key": API_KEY,
+                    "x-rapidapi-key": API_KEYS,
 
                 }
             }
