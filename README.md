@@ -1,8 +1,25 @@
-![](https://img.shields.io/badge/License-MIT-yellow.svg)
-
 # Artist Savor
+ Fun with collaborators using Sequelize, Passport, Express, Express-handlebars, Axios, 
+ Chart.js, dotenv, MySql, Mysql2, Api external and internal model connections.
 
-## Table of Contents:
+[![npm version](https://img.shields.io/badge/express--handlebars-----v5.1.0-orange)](https://www.npmjs.com/package/express-handlebars)
+
+[![npm version](https://img.shields.io/badge/sequelize-----v6.3.5-pink)](https://www.npmjs.com/package/sequelize)
+
+[![npm version](https://img.shields.io/badge/mysql-----v2.18.1-blue)](https://www.npmjs.com/package/mysql)
+
+[![npm version](https://img.shields.io/badge/Express-----v4.17.1-brightgreen)](https://www.npmjs.com/package/express)
+
+[![npm version](https://img.shields.io/badge/Passport-----v4.17.1-yellow)](https://www.npmjs.com/package/passport)
+
+[![npm version](https://img.shields.io/badge/bcryptjs-----v2.4.3-blue)](https://www.npmjs.com/package/bcryptjs)
+
+[![npm version](https://img.shields.io/badge/chartjs-----v2.9.3-blue)](https://www.npmjs.com/package/chart.js)
+
+[![npm version](https://img.shields.io/badge/dotenv-----v8.2.0-orange)](https://www.npmjs.com/package/dotenv)
+
+
+
 
 - [Description](#description)
 - [Installation](#installation)
