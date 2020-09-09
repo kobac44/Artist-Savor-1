@@ -137,7 +137,6 @@ module.exports = function (app) {
   });
   app.get('/api/yahoo/:symbol', function (req, res) {
     let query = "https://apidojo-yahoo-finance-v1.p.rapidapi.com/market/get-quotes?region=US&lang=en&symbols=" + req.params.symbol + "%252CKC%253DF%252C002210.KS%252CIWM%252CAMECX";
-
     const settings = {
       "async": true,
       "crossDomain": true,
@@ -146,12 +145,28 @@ module.exports = function (app) {
       "headers": {
         "x-rapidapi-host": "apidojo-yahoo-finance-v1.p.rapidapi.com",
         "x-rapidapi-key": process.env.API_KEY,
-
       }
     }
     axios(settings).then(function (result) {
       console.log("results", result);
       res.json(result.data);
     })
-  })
+  });
+  app.get('/api/yahoo', function (req, res) {
+    var settings2 = {
+      "async": true,
+      "crossDomain": true,
+      "url": "https://apidojo-yahoo-finance-v1.p.rapidapi.com/market/get-summary?region=US&lang=en",
+      "method": "GET",
+      "headers": {
+        "x-rapidapi-host": "apidojo-yahoo-finance-v1.p.rapidapi.com",
+        "x-rapidapi-key": process.env.API_KEY,
+
+      }
+    }
+    axios(settings2).then(function (response) {
+      console.log("response", response);
+      res.json(response.data);
+    })
+  });
 };
