@@ -69,7 +69,7 @@
 
 # Installation:
 
-  > No installation nessessary; just follow the deployed link here:
+  > No installation necessary; just follow the deployed link here:
 
    ---- https://morning-fortress-86194.herokuapp.com ---
 
@@ -137,7 +137,7 @@
   * https://www.npmjs.com/package/mysql
   * https://www.npmjs.com/package/dotenv
 
-# Tests
+# Testing
 
   The following is a video display of the working Artist Savor App
 
