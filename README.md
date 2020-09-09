@@ -18,116 +18,131 @@
 
 [![npm version](https://img.shields.io/badge/dotenv-----v8.2.0-orange)](https://www.npmjs.com/package/dotenv)
 
+ # Licence
+  
+  >  
+     * select the license badge to view licence aggreements:
 
+     
+[![License](https://img.shields.io/badge/License-MIT-lime.svg)](https://opensource.org/licenses/MIT)
 
+  ### :octocat:
 
-- [Description](#description)
-- [Installation](#installation)
-- [Usage](#usage)
-- [License](#license)
-- [Contributing](#contributing)
-- [Tests](#tests)
-- [Questions](#questions)
+  ### node js :package: 
 
----
+# Artist Savor App
+
+* Using MVC development methods
+* requiring: Sequelize, Passport, Express, Express-handlebars
+* NPM package mysql, mysql2
+* Leveraging Express for the app and Express-handlebars for the view
+* Using Axios for passing external api data to js and the view
+
+# Table of Contents
+  <!-- toc -->
+  * [Description](#description)
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Setup](#setup)
+  * [Contributors](#contributors)
+  * [GitHub Information](#github-information)
+  * [Questions](#questions)
+  * [Credits](#credits)
+  * [Testing](#testing)
+   <!-- toc stop -->
 
 # Description:
+>
+  An application to give artists/users a simple way to store money away for future. This process is made efficient and easy for any Artist-Artform!
 
-An application to give artists/users a simple way to store money away for future. This process is made efficient and easy for any Artist-Artform!
+  This is especially important given the recent climate of social distancing today: where artist all over the world have lost the opportunity they once had to find work, wether near or far.
 
-This is especially important given the recent climate of social distancing today: where artist all over the world have lost the opportunity they once had to find work, wether near or far.
+  The Artist Savor will help the artist save their Artform and protect and sustain their everyday life.
 
-The Artist Savor will help the artist save their Artform and protect and sustain their everyday life.
+ * The Artitst Savor-App.
 
-The Artitst Savor-App.
+  Sign-up or Sign In with your Email and password
 
-- Sign-up or Sign In with your Email and password
+  Sign-in requires a email and password, going directly to members account and account options.
 
-- Sign-up requires an email and password, provides banking options that fit the clients artform/life style, become a member, deposit no lower than $50, must fulfill $500 deposit within 364 days of membership. Penalties are assessed for early withdrawl and/or day 365 of initial payment.
+  Options to view investment in Market indexes and ability to search stock equities by symbol in real time.
 
-- Sign-in requires a email and password, going directly to members account and account options.
+# Installation:
 
-Options to pay into health-insurance, self-insurance (when unable to work), and life insurance.
+  > No installation nessessary; just follow the deployed link here:
 
-The User:
+   ---- https://morning-fortress-86194.herokuapp.com ---
 
-- able to sign-up with their email and they're password choice.
+                          or
 
-- Choose a bank provided by the app.
+   ---- https://tinyurl.com/ArtistSavor ----
 
-- Can deposit a minimum of \$50 on inital membership
-  start
+# Usage:
 
-- have 2yrs before withdrawing the first \$500
+    Create an account add Artist Savor paid in amounts, and Artist Costs see the transaction tables, Artist net total and pie chart change with every addition and withdrawl. If you want to check your investments: the top three Market Indexes are available to see and you may search stock prices by symbol for current market price.
+# Setup 
 
-- Can choose insurance options
+  > When you first signup in order to see the pie chart work you must create transactions; click the Artist Savor button to add paid amounts and Artist Cost button to show paid out amounts.
 
-- Can decide auto deposit or manual.
+# Contributors
 
-- can choose widget features on or for their mobile app
+### Dan Ayers
+### Kobie Watkins
+### Victor Litzau
+### @Admin - JR Learning Assistant askBCS
+### @Jon Jackson - big ups for help with axios
+### Carl Vega[TA] - thanks for burning the midnight oil!
+### Zach Rickards- Instructor Thanks for all you do, I don't have an apple to give the teacher right now- lol
+#### askBCS Learning assistant @iarcones "Thanks again" :)
+#### @Carl Vega [TA] thanks for giving the code a second look for me!
+### Collaborators are as follows:
 
-- has 364 days to deposit \$500 before incurring a penalty
+  > Github Profiles of Our Team:
+  
+    ---- https://github.com/danglayers
 
-Members:
+     ---- https://github.com/kobac44 
 
-- sign-in with email and password
+    Email Addresses of Our Team: 
+    
+      ---- danglayers@gmail.com
 
-- sent directly to their acounts and transaction
+# GitHub Information
+ 
+  # '''' https://github.com/victorsc45 ''''
 
-- required to deposit \$500 a year
+  Picture of Developer: 
 
-- Can choose insurance options
+  <img src="https://avatars0.githubusercontent.com/victorsc45" width="200px" >
+  
+  ## *Questions*
 
-- have 2yrs before withdrawing the first \$500
+  > questions or comments contact me by email : 
 
-- can choose widget features on or for their mobile app
+     
+  ####  victorlitzau+github@gmail.com
 
----
+# Credits 
 
-## Installation:
-
-Artist-Savor Install and Dependencies used:
-
-#### Bcrypt.js
-
-#### Chart.js
-
-#### dotenv
-
-#### Express
-
-#### Express-Handlebars
-
-#### MySQL
-
-#### MySQL2
-
-#### Passport
-
-#### Sequelize
-
-## Usage:
-
----
-
-# License:
-
-MIT License: A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
-
----
-
-# Contributing
-
-- Carl Vega[TA]
-- Zach Rickards- Instructor
+  * https://www.npmjs.com/
+  * https://www.youtube.com/watch?v=btG3SkoNOLU&list=PLOFmg4xbN_TPrB6w4rThsFanVxJI_SfER&index=3
+  * https://rapidapi.com/apidojo/api/yahoo-finance1
+  * https://api.jquery.com/
+  * https://dashboard.heroku.com/apps
+  * https://developer.okta.com/blog/2018/06/28/tutorial-build-a-basic-crud-app-with-node
+  * https://www.bootstrapcdn.com/fontawesome/
+  * https://stackoverflow.com
+  * https://www.npmjs.com/package/express
+  * https://www.npmjs.com/package/body-parser
+  * https://www.npmjs.com/package/mysql
+  * https://www.npmjs.com/package/dotenv
 
 # Tests
 
-Tests were required to maintain app functionality and quality assurance.
+  The following is a video display of the working Artist Savor App
 
-# Contact Us
+ ---- https://drive.google.com/file/d/1c31qvdHxrCJt1KwxDBhCwfH7CLB6jDde/view ----
 
-Github Profiles of Our Team: <https://github.com/danglayers> <br>
-<https://github.com/victorsc45> <br>
-<https://github.com/kobac44> <br>
-Email Addresses of Our Team: <danglayers@gmail.com>
+
+
+
