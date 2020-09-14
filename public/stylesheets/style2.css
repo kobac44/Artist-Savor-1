@@ -133,9 +133,10 @@ justify-content: baseline;
 }
 .pop {
     margin-left: 40px;
+    margin-right: 40px;
 }
 .quote {
-    margin-left: 40px;
+    margin-left: 50px;
 }
 /* conform the popover buttons */
 .btn-secondary {
